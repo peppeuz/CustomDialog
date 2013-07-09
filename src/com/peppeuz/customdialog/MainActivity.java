@@ -36,18 +36,17 @@ public class MainActivity extends Activity {
 				dialog.setContentView(R.layout.custom);
 				dialog.setTitle("AndroidWorld");
 
-				// set the custom dialog components - text, image and button
+
 				TextView text = (TextView) dialog.findViewById(R.id.text);
 				text.setText("Digita qui il testo che vuoi far apparire:");
-				ImageView image = (ImageView) dialog.findViewById(R.id.image);
-				image.setImageResource(R.drawable.ic_launcher);
+				
 				final EditText input = (EditText) dialog
 						.findViewById(R.id.inputText);
 
-				Button dialogButton = (Button) dialog
+				Button buttonDialog = (Button) dialog
 						.findViewById(R.id.dialogButtonOK);
-				// if button is clicked, close the custom dialog
-				dialogButton.setOnClickListener(new OnClickListener() {
+
+				buttonDialog.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View v) {
 						String testo = input.getText().toString();
